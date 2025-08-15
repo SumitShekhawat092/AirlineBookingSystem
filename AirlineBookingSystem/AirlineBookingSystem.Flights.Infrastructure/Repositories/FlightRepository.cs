@@ -23,7 +23,7 @@ namespace AirlineBookingSystem.Flights.Infrastructure.Repositories
 
         }
 
-        public async Task DeleteFlightAsync(int id)
+        public async Task DeleteFlightAsync(Guid id)
         {
             const string sql = @"DELETE FROM Flights WHERE Id = @Id";
 
