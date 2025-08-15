@@ -5,10 +5,6 @@ VisualStudioVersion = 17.13.35919.96 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{28AF122C-CE22-4087-B719-042A0DC989A0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{CD992F66-9149-4191-9332-150DCAFB23C4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{ADF8C9C6-64EE-4CC1-AF2C-A2C0FBEB5877}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Booking", "Booking", "{97EC8B98-0F7F-4186-8874-9225F729C7CF}"
@@ -50,6 +46,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineBookingSystem.Payments.Core", "AirlineBookingSystem.Payments.Core\AirlineBookingSystem.Payments.Core.csproj", "{9CF01C18-AA0A-4387-BD19-5B6C89BFD51C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineBookingSystem.Payments.Infrastructure", "AirlineBookingSystem.Payments.Infrastructure\AirlineBookingSystem.Payments.Infrastructure.csproj", "{E86656EE-25B7-4DBC-A92D-955BD8FF865D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlineBookingSystem.BuildingBlocks", "AirlineBookingSystem.BuildingBlocks\AirlineBookingSystem.BuildingBlocks.csproj", "{A1360673-F264-448C-BEDC-4537A748D577}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -121,13 +119,15 @@ Global
 		{E86656EE-25B7-4DBC-A92D-955BD8FF865D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E86656EE-25B7-4DBC-A92D-955BD8FF865D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E86656EE-25B7-4DBC-A92D-955BD8FF865D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1360673-F264-448C-BEDC-4537A748D577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1360673-F264-448C-BEDC-4537A748D577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1360673-F264-448C-BEDC-4537A748D577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1360673-F264-448C-BEDC-4537A748D577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{28AF122C-CE22-4087-B719-042A0DC989A0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{CD992F66-9149-4191-9332-150DCAFB23C4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{97EC8B98-0F7F-4186-8874-9225F729C7CF} = {ADF8C9C6-64EE-4CC1-AF2C-A2C0FBEB5877}
 		{8D508D75-49C3-4A0C-85E8-6CFB3B4849BD} = {ADF8C9C6-64EE-4CC1-AF2C-A2C0FBEB5877}
 		{D5CC46D7-C24F-42C0-BBF3-C8C954AB3D54} = {ADF8C9C6-64EE-4CC1-AF2C-A2C0FBEB5877}
@@ -148,6 +148,7 @@ Global
 		{20375E72-896D-412A-A5BB-F0CF2B0536A9} = {DED6A8E5-7C57-4F81-89E6-64386561DBFA}
 		{9CF01C18-AA0A-4387-BD19-5B6C89BFD51C} = {DED6A8E5-7C57-4F81-89E6-64386561DBFA}
 		{E86656EE-25B7-4DBC-A92D-955BD8FF865D} = {DED6A8E5-7C57-4F81-89E6-64386561DBFA}
+		{A1360673-F264-448C-BEDC-4537A748D577} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7497E1C4-1B4D-4164-BCE1-843F81295D29}

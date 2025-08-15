@@ -1,6 +1,9 @@
+using AirlineBookingSystem.Bookings.Application.Consumers;
 using AirlineBookingSystem.Bookings.Application.Handlers;
 using AirlineBookingSystem.Bookings.Core.Repositories;
 using AirlineBookingSystem.Bookings.Infrastructure.Repositories;
+using AirlineBookingSystem.BuildingBlocks.Common;
+using MassTransit;
 using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Reflection;
@@ -25,6 +28,20 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assemblies
 
 // Application Services
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+
+// MassTransit
+builder.Services.AddMassTransit(config =>
+{
+    config.AddConsumer<NotificationEventConsumer>();
+    config.UsingRabbitMq((ct, cfg) => 
+    {
+        cfg.Host(builder.Configuration["EventBusSetting:HostAddress"]);
+        cfg.ReceiveEndpoint(EventBusConstant.NotificationSentQueue, c =>
+        {
+            c.ConfigureConsumer<NotificationEventConsumer>(ct);
+        });
+    });
+});
 
 // Add Sql Connection
 builder.Services.AddScoped<IDbConnection>(sp =>
