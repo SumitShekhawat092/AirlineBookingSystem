@@ -19,7 +19,7 @@ namespace AirlineBookingSystem.Flights.Infrastructure.Repositories
             INSERT INTO Flights (Id, FlightNumber, Origin, Destination, DepartureTime, ArrivalTime)
             VALUES (@Id, @FlightNumber, @Origin, @Destination, @DepartureTime, @ArrivalTime)";
 
-            await _dbConnection.ExecuteAsync(sql);
+            await _dbConnection.ExecuteAsync(sql,flight);
 
         }
 
