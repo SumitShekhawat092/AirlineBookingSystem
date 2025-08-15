@@ -11,6 +11,6 @@ namespace AirlineBookingSystem.Flights.Core.Repositories
     {
         Task<IEnumerable<Flight>> GetFlightsAsync();
         Task AddFlightAsync(Flight flight);
-        Task DeleteFlightAsync(int id);
+        Task DeleteFlightAsync(Guid id);
     }
 }
