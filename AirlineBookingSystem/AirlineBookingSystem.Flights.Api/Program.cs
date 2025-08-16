@@ -1,5 +1,6 @@
 using AirlineBookingSystem.Flights.Application.Handlers;
 using AirlineBookingSystem.Flights.Core.Repositories;
+using AirlineBookingSystem.Flights.Infrastructure.Data;
 using AirlineBookingSystem.Flights.Infrastructure.Repositories;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -25,11 +26,8 @@ var assemblies = new Assembly[]
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assemblies));
 
 // Application Services
+builder.Services.AddScoped<IFlightContext, FlightContext>();
 builder.Services.AddScoped<IFlightRepository, FlightRepository>();
-
-// Add Sql Connection
-builder.Services.AddScoped<IDbConnection>(sp =>
-new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
